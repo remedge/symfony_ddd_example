@@ -1,0 +1,3 @@
+shared:
+  resource: ../src/Shared/Presentation/Http/
+  type: annotation
