@@ -17,8 +17,7 @@ class Post
         private string $content,
         private readonly UuidInterface $authorId,
         private readonly DateTimeImmutable $createdAt,
-    )
-    {
+    ) {
         $this->updatedAt = $createdAt;
     }
 

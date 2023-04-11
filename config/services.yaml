@@ -21,6 +21,11 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
+    # Uuid resolver
+    App\Shared\Infrastructure\Symfony\Http\UuidValueResolver:
+        tags:
+            - { name: controller.argument_value_resolver, priority: 500 }
+
     # Doctrine
     _instanceof:
         App\Shared\Infrastructure\Doctrine\Mapping\DoctrineMapping:
@@ -34,4 +39,8 @@ services:
     # Controllers
     App\Shared\Presentation\Http\:
         resource: '../src/Shared/Presentation/Http/**/*Controller.php'
+        tags: [ 'controller.service_arguments' ]
+
+    App\User\Presentation\Http\:
+        resource: '../src/User/Presentation/Http/**/*Controller.php'
         tags: [ 'controller.service_arguments' ]

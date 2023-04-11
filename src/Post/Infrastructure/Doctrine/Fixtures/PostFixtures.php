@@ -15,7 +15,7 @@ class PostFixtures extends Fixture
 {
     public const POST_ID_1 = '00000000-0000-0000-0000-000000000001';
 
-    public function load(ObjectManager $manager)
+    public function load(ObjectManager $manager): void
     {
         $post = new Post(
             id: Uuid::fromString(self::POST_ID_1),

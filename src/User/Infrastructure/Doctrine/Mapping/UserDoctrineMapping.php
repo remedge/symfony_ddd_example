@@ -24,6 +24,6 @@ class UserDoctrineMapping extends DoctrineMapping
             ->makePrimaryKey()
             ->build();
 
-        $builder->createField('username', 'string');
+        $builder->addField('username', 'string');
     }
 }
