@@ -1,0 +1,6 @@
+services:
+    App\Shared\Application\Clock:
+        class: App\Tests\Mock\MockClock
+
+    App\Shared\Application\UuidProvider:
+        class: App\Tests\Mock\MockUuidProvider
