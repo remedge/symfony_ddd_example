@@ -15,6 +15,10 @@ doctrine:
                 type: php
                 dir: "%kernel.project_dir%/src/User/Infrastructure/Doctrine/Mapping"
                 prefix: App\User\Domain\User
+            App\Post\Domain\Post:
+                type: php
+                dir: "%kernel.project_dir%/src/Post/Infrastructure/Doctrine/Mapping"
+                prefix: App\Post\Domain\Post
 
 when@test:
     doctrine:
