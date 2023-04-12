@@ -8,6 +8,7 @@ use App\Post\Domain\Post;
 use App\Post\Domain\PostRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Ramsey\Uuid\UuidInterface;
 
 /**
  * @extends ServiceEntityRepository<Post>
@@ -23,5 +24,10 @@ class DoctrinePostRepository extends ServiceEntityRepository implements PostRepo
     {
         $this->_em->persist($post);
         $this->_em->flush();
+    }
+
+    public function findById(UuidInterface $id): ?Post
+    {
+        return $this->find($id);
     }
 }
