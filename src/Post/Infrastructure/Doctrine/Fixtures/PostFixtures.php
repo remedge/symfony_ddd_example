@@ -13,7 +13,7 @@ use Ramsey\Uuid\Uuid;
 
 class PostFixtures extends Fixture
 {
-    public const POST_ID_1 = '00000000-0000-0000-0000-000000000001';
+    public const POST_ID_1 = '9e0b14de-0377-41b6-b624-c43d99896302';
 
     public function load(ObjectManager $manager): void
     {

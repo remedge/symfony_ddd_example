@@ -19,16 +19,16 @@ class CreatePostCommandHandlerTest extends KernelTestCase
         $cancelPartyCommandHandler = $this->getContainer()->get(CreatePostCommandHandler::class);
 
         $cancelPartyCommandHandler->__invoke(new CreatePostCommand(
-            id: Uuid::fromString('00000000-0000-0000-0000-000000000003'),
+            id: Uuid::fromString('8acc678e-ecb0-441a-a507-eab47dd30d12'),
             title: 'title',
             content: 'content',
             authorId: Uuid::fromString(UserFixtures::USER_ID_1),
         ));
 
         $post = $this->getContainer()->get(PostRepository::class)
-            ->findById(Uuid::fromString('00000000-0000-0000-0000-000000000003'));
+            ->findById(Uuid::fromString('8acc678e-ecb0-441a-a507-eab47dd30d12'));
 
-        self::assertEquals('00000000-0000-0000-0000-000000000003', $post->getId()->toString());
+        self::assertEquals('8acc678e-ecb0-441a-a507-eab47dd30d12', $post->getId()->toString());
         self::assertEquals('title', $post->getTitle());
         self::assertEquals('content', $post->getContent());
         self::assertEquals(UserFixtures::USER_ID_1, $post->getAuthorId()->toString());
