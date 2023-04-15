@@ -17,6 +17,7 @@ class Post
         private string $content,
         private readonly UuidInterface $authorId,
         private readonly DateTimeImmutable $createdAt,
+        private ?DateTimeImmutable $publishedAt = null,
     ) {
         $this->updatedAt = $createdAt;
     }
@@ -49,5 +50,15 @@ class Post
     public function getUpdatedAt(): DateTimeImmutable
     {
         return $this->updatedAt;
+    }
+
+    public function getPublishedAt(): ?DateTimeImmutable
+    {
+        return $this->publishedAt;
+    }
+
+    public function setPublishedAt(?DateTimeImmutable $publishedAt): void
+    {
+        $this->publishedAt = $publishedAt;
     }
 }

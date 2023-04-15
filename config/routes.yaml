@@ -5,3 +5,7 @@ shared:
 user:
   resource: ../src/User/Presentation/Http/
   type: annotation
+
+post:
+  resource: ../src/Post/Presentation/Http/
+  type: annotation

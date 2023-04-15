@@ -2,16 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Post\Presentation;
-
-use Ramsey\Uuid\UuidInterface;
+namespace App\Post\Presentation\Http;
 
 readonly class CreatePostRequest
 {
     public function __construct(
         public string $title,
         public string $content,
-        public UuidInterface $authorId,
+        public string $authorId,
     ) {
     }
 }

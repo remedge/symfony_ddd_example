@@ -35,5 +35,9 @@ class PostDoctrineMapping extends DoctrineMapping
         $builder->addField('createdAt', 'datetime_immutable');
 
         $builder->addField('updatedAt', 'datetime_immutable');
+
+        $builder->createField('publishedAt', 'datetime_immutable')
+            ->nullable()
+            ->build();
     }
 }

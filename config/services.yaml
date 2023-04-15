@@ -26,6 +26,11 @@ services:
         tags:
             - { name: controller.argument_value_resolver, priority: 500 }
 
+    # Fusonic
+    Fusonic\HttpKernelExtensions\Controller\RequestDtoResolver:
+        tags:
+            - { name: controller.argument_value_resolver, priority: 50 }
+
     # Doctrine
     _instanceof:
         App\Shared\Infrastructure\Doctrine\Mapping\DoctrineMapping:
@@ -44,3 +49,11 @@ services:
     App\User\Presentation\Http\:
         resource: '../src/User/Presentation/Http/**/*Controller.php'
         tags: [ 'controller.service_arguments' ]
+
+    App\Post\Presentation\Http\:
+        resource: '../src/Post/Presentation/Http/**/*Controller.php'
+        tags: [ 'controller.service_arguments' ]
+
+    App\Shared\Infrastructure\Symfony\ExceptionListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }

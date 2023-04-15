@@ -2,17 +2,18 @@
 
 declare(strict_types=1);
 
-namespace App\Post\Presentation;
+namespace App\Post\Presentation\Http;
 
 use App\Post\Application\Command\CreatePostCommand;
 use App\Shared\Application\UuidProvider;
 use Fusonic\HttpKernelExtensions\Attribute\FromRequest;
+use Ramsey\Uuid\Uuid;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
-class CreatePostController
+readonly class CreatePostController
 {
     public function __construct(
         private MessageBusInterface $commandBus,
@@ -29,7 +30,7 @@ class CreatePostController
                 id: $this->uuidProvider->provide(),
                 title: $request->title,
                 content: $request->content,
-                authorId: $request->authorId,
+                authorId: Uuid::fromString($request->authorId),
             ),
         );
 
