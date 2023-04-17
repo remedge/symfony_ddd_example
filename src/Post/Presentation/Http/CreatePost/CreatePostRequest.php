@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Post\Presentation\Http;
+namespace App\Post\Presentation\Http\CreatePost;
 
 readonly class CreatePostRequest
 {

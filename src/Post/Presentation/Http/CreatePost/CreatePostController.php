@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Post\Presentation\Http;
+namespace App\Post\Presentation\Http\CreatePost;
 
 use App\Post\Application\Command\CreatePostCommand;
 use App\Shared\Application\UuidProvider;
