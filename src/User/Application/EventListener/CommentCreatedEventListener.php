@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\User\Domain\EventListener;
+namespace App\User\Application\EventListener;
 
-use App\Comment\Domain\Event\CommentCreatedEvent;
+use App\Comment\Application\Event\CommentCreatedEvent;
 use App\User\Domain\UserRepository;
 use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 

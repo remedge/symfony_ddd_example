@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Comment\Application\Command;
 
+use App\Comment\Application\Event\CommentCreatedEvent;
 use App\Comment\Domain\Comment;
 use App\Comment\Domain\CommentRepository;
-use App\Comment\Domain\Event\CommentCreatedEvent;
 use App\Post\Application\Query\PostQuery;
 use App\User\Application\Query\UserQuery;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;

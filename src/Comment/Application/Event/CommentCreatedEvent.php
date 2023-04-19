@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Comment\Domain\Event;
+namespace App\Comment\Application\Event;
 
 use Ramsey\Uuid\UuidInterface;
 
