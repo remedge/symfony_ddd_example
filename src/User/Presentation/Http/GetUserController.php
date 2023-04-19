@@ -21,7 +21,7 @@ readonly class GetUserController
     public function __invoke(
         UuidInterface $userId,
     ): JsonResponse {
-        $user = $this->userQuery->getUserById($userId);
+        $user = $this->userQuery->getById($userId);
 
         return new JsonResponse(new UserResponse(
             id: $user->id->toString(),

@@ -54,6 +54,10 @@ services:
         resource: '../src/Post/Presentation/Http/**/*Controller.php'
         tags: [ 'controller.service_arguments' ]
 
+    App\Comment\Presentation\Http\:
+        resource: '../src/Comment/Presentation/Http/**/*Controller.php'
+        tags: [ 'controller.service_arguments' ]
+
     App\Shared\Infrastructure\Symfony\ExceptionListener:
         tags:
             - { name: kernel.event_listener, event: kernel.exception }

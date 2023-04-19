@@ -16,7 +16,7 @@ readonly class UserQuery
     ) {
     }
 
-    public function getUserById(UuidInterface $userId): UserDTO
+    public function getById(UuidInterface $userId): UserDTO
     {
         $user = $this->userRepository->findById($userId);
 

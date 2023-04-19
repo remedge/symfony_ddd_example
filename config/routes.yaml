@@ -9,3 +9,7 @@ user:
 post:
   resource: ../src/Post/Presentation/Http/
   type: annotation
+
+comment:
+  resource: ../src/Comment/Presentation/Http/
+  type: annotation

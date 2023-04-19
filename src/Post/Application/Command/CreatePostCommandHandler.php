@@ -22,7 +22,7 @@ readonly class CreatePostCommandHandler
 
     public function __invoke(CreatePostCommand $command): void
     {
-        $user = $this->userQuery->getUserById($command->authorId);
+        $user = $this->userQuery->getById($command->authorId);
 
         $post = new Post(
             id: $command->id,

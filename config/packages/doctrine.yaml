@@ -19,6 +19,10 @@ doctrine:
                 type: php
                 dir: "%kernel.project_dir%/src/Post/Infrastructure/Doctrine/Mapping"
                 prefix: App\Post\Domain\Post
+            App\Comment\Domain\Comment:
+                type: php
+                dir: "%kernel.project_dir%/src/Comment/Infrastructure/Doctrine/Mapping"
+                prefix: App\Comment\Domain\Comment
 
 when@test:
     doctrine:
